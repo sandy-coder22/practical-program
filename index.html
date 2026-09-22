@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>WebTech Practical Hub</title>
+
+<style>
+:root{
+    --bg:#EAFFF7;
+    --primary:#35A982;
+    --dark:#24966F;
+    --text:#18352D;
+    --card:#FFFFFF;
+    --light:#DFF9EE;
+    --border:#B8E6D5;
+    --muted:#718B83;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:
+        radial-gradient(circle at 10% 20%, #DFF9EE 0, transparent 25%),
+        radial-gradient(circle at 90% 80%, #CFF4E4 0, transparent 25%),
+        var(--bg);
+    color:var(--text);
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+/* Floating shapes */
+
+.blob{
+    position:fixed;
+    border-radius:50%;
+    filter:blur(2px);
+    opacity:.45;
+    z-index:-1;
+    animation:float 7s ease-in-out infinite;
+}
+
+.blob.one{
+    width:180px;
+    height:180px;
+    background:#B8E6D5;
+    top:80px;
+    left:-70px;
+}
+
+.blob.two{
+    width:220px;
+    height:220px;
+    background:#DFF9EE;
+    right:-80px;
+    bottom:60px;
+    animation-delay:2s;
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0) rotate(0deg);
+    }
+    50%{
+        transform:translateY(-25px) rotate(10deg);
+    }
+}
+
+/* Header */
+
+header{
+    text-align:center;
+    padding:70px 20px 40px;
+}
+
+.badge{
+    display:inline-block;
+    padding:8px 16px;
+    background:var(--light);
+    border:1px solid var(--border);
+    color:var(--dark);
+    border-radius:30px;
+    font-size:14px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+h1{
+    font-size:clamp(38px,6vw,68px);
+    color:var(--dark);
+    margin-bottom:15px;
+    letter-spacing:-2px;
+}
+
+.subtitle{
+    max-width:700px;
+    margin:auto;
+    color:var(--muted);
+    font-size:17px;
+    line-height:1.7;
+}
+
+/* Main */
+
+.container{
+    max-width:1150px;
+    margin:auto;
+    padding:30px 20px 70px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.section-title h2{
+    font-size:30px;
+    margin-bottom:8px;
+}
+
+.section-title p{
+    color:var(--muted);
+}
+
+/* Cards */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.card{
+    position:relative;
+    background:rgba(255,255,255,.88);
+    border:1px solid var(--border);
+    border-radius:28px;
+    padding:35px 28px;
+    text-align:center;
+    text-decoration:none;
+    color:var(--text);
+    box-shadow:0 15px 40px rgba(36,150,111,.10);
+    overflow:hidden;
+    transition:.35s ease;
+}
+
+.card::before{
+    content:"";
+    position:absolute;
+    width:130px;
+    height:130px;
+    background:var(--light);
+    border-radius:50%;
+    top:-60px;
+    right:-40px;
+    transition:.35s;
+}
+
+.card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 25px 55px rgba(36,150,111,.20);
+    border-color:var(--primary);
+}
+
+.card:hover::before{
+    transform:scale(1.5);
+}
+
+.icon{
+    position:relative;
+    width:75px;
+    height:75px;
+    margin:0 auto 22px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:22px;
+    background:var(--light);
+    color:var(--dark);
+    font-size:30px;
+    font-weight:bold;
+    border:1px solid var(--border);
+}
+
+.card h3{
+    font-size:27px;
+    margin-bottom:12px;
+    position:relative;
+}
+
+.card p{
+    color:var(--muted);
+    line-height:1.6;
+    min-height:52px;
+    position:relative;
+}
+
+.count{
+    display:inline-block;
+    margin-top:20px;
+    padding:8px 14px;
+    background:#F2FFFA;
+    border:1px solid var(--border);
+    border-radius:20px;
+    color:var(--dark);
+    font-size:13px;
+    font-weight:bold;
+    position:relative;
+}
+
+.button{
+    display:inline-block;
+    margin-top:20px;
+    padding:13px 22px;
+    background:var(--primary);
+    color:white;
+    border-radius:13px;
+    font-weight:bold;
+    position:relative;
+    transition:.25s;
+}
+
+.card:hover .button{
+    background:var(--dark);
+    transform:scale(1.04);
+}
+
+/* Info */
+
+.info{
+    margin-top:45px;
+    padding:25px;
+    border-radius:22px;
+    background:rgba(255,255,255,.75);
+    border:1px solid var(--border);
+    text-align:center;
+}
+
+.info strong{
+    color:var(--dark);
+}
+
+footer{
+    text-align:center;
+    padding:30px 20px;
+    color:var(--muted);
+    border-top:1px solid var(--border);
+    background:rgba(255,255,255,.5);
+}
+
+/* Responsive */
+
+@media(max-width:800px){
+    .cards{
+        grid-template-columns:1fr;
+        max-width:500px;
+        margin:auto;
+    }
+
+    header{
+        padding-top:50px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="blob one"></div>
+<div class="blob two"></div>
+
+<header>
+
+    <div class="badge">
+        🌿 WEB TECHNOLOGY & INTERNET PROGRAMMING
+    </div>
+
+    <h1>WebTech Practical Hub</h1>
+
+    <p class="subtitle">
+        A complete collection of HTML, CSS and JavaScript practical programs
+        designed for learning, practice and quick reference.
+    </p>
+
+</header>
+
+
+<main class="container">
+
+    <div class="section-title">
+        <h2>Choose Your Practical</h2>
+        <p>Select a technology to explore all its programs.</p>
+    </div>
+
+
+    <div class="cards">
+
+        <!-- HTML -->
+
+        <a href="html/index.html" class="card">
+
+            <div class="icon">
+                &lt;/&gt;
+            </div>
+
+            <h3>HTML</h3>
+
+            <p>
+                Explore HTML fundamentals, forms, tables, multimedia,
+                semantic elements and responsive webpages.
+            </p>
+
+            <span class="count">
+                15 Programs
+            </span>
+
+            <br>
+
+            <span class="button">
+                View HTML Programs →
+            </span>
+
+        </a>
+
+
+        <!-- CSS -->
+
+        <a href="css/index.html" class="card">
+
+            <div class="icon">
+                #
+            </div>
+
+            <h3>CSS</h3>
+
+            <p>
+                Explore CSS selectors, layouts, animations, UI components,
+                responsive designs and modern webpage projects.
+            </p>
+
+            <span class="count">
+                270 Programs
+            </span>
+
+            <br>
+
+            <span class="button">
+                View CSS Programs →
+            </span>
+
+        </a>
+
+
+        <!-- JavaScript -->
+
+        <a href="javascript/index.html" class="card">
+
+            <div class="icon">
+                JS
+            </div>
+
+            <h3>JavaScript</h3>
+
+            <p>
+                Practice JavaScript programming, DOM events, applications,
+                ES6 concepts, APIs, storage and interactive webpages.
+            </p>
+
+            <span class="count">
+                67 Programs
+            </span>
+
+            <br>
+
+            <span class="button">
+                View JavaScript Programs →
+            </span>
+
+        </a>
+
+    </div>
+
+
+    <div class="info">
+
+        📚 <strong>Total Practical Collection:</strong>
+        352 Programs
+
+        <br><br>
+
+        HTML: 15 &nbsp; • &nbsp;
+        CSS: 270 &nbsp; • &nbsp;
+        JavaScript: 67
+
+    </div>
+
+</main>
+
+
+<footer>
+
+    🌿 WebTech Practical Hub
+    <br>
+    Web Technology & Internet Programming
+
+</footer>
+
+
+</body>
+</html>

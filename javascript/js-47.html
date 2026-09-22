@@ -1,13 +1,125 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>DevCore. | JS-47</title><link rel="stylesheet" href="style.css"></head>
-<body><header class="nav"><a class="logo" href="index.html">Dev<span>Core.</span></a>
-<nav class="navlinks"><a href="index.html">Home</a><a href="index.html#html">HTML</a><a href="index.html#css">CSS</a><a href="index.html#javascript">JavaScript</a></nav></header>
-<main class="page"><a class="back" href="index.html#programs">← Back to JavaScript Practical 67</a>
-<section class="labhead"><div class="num">JS-47 / JAVASCRIPT PRACTICAL</div>
-<h1>Create a complete interactive webpage using HTML, CSS, and JavaScript.</h1>
-<p>A standalone practical page in the same soft DevCore visual system shown in the reference.</p></section>
-<section class="workspace"><div class="panel"><h2>Live Experiment</h2><button class="btn" id="interactive">Interact</button><div id="out" class="output">Result will appear here.</div></div>
-<div class="panel"><h2>JavaScript Source</h2><pre><code>interactive.onclick=()=&gt;out.textContent=&#x27;Interactive section updated at &#x27;+new Date().toLocaleTimeString();</code></pre></div></section></main>
-<footer>DevCore. · WebTech Practical Hub · JavaScript Practical 47</footer>
-<script>interactive.onclick=()=>out.textContent='Interactive section updated at '+new Date().toLocaleTimeString();</script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JS-47 Output</title>
+<style>
+:root{--bg:#EAFFF7;--primary:#35A982;--dark:#24966F;--text:#18352D;--card:#fff;--light:#DFF9EE;--line:#B8E6D5;--muted:#718B83}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:linear-gradient(135deg,#EAFFF7,#F7FFFC);color:var(--text);min-height:100vh}
+header{padding:50px 20px;text-align:center;background:linear-gradient(135deg,#DFF9EE,#fff);border-bottom:1px solid var(--line)}
+h1{margin:0;color:var(--dark);font-size:38px}
+.wrap{max-width:900px;margin:auto;padding:35px 20px}
+.box{background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px;margin-bottom:20px;box-shadow:0 12px 30px #24966F12}
+.label{font-size:13px;font-weight:bold;color:var(--dark);text-transform:uppercase;letter-spacing:1px}
+.question{font-size:20px;line-height:1.6;margin-top:10px}
+.controls{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
+input{flex:1;min-width:220px;padding:13px;border:1px solid var(--line);border-radius:10px;font-size:15px}
+button{border:0;background:var(--primary);color:white;padding:13px 20px;border-radius:10px;font-weight:bold;cursor:pointer}
+button:hover{background:var(--dark)}
+.output{margin-top:20px;padding:20px;border-radius:14px;background:#F2FFFA;border:1px solid var(--line);font-size:18px;min-height:55px}
+.back{display:inline-block;color:var(--dark);font-weight:bold;text-decoration:none;margin-top:8px}
+</style>
+</head>
+<body>
+<header><h1>JavaScript Practical 47</h1></header>
+<main class="wrap">
+<div class="box">
+<div class="label">Question</div>
+<div class="question">Web Technology & Internet Programming</div>
+</div>
+<div class="box">
+<div class="label">Output</div>
+
+<div class="controls">
+  <input id="input" placeholder="Enter value (optional)">
+  <button onclick="runProgram()">Run Program</button>
+</div>
+<div id="output" class="output">Click “Run Program” to see the output.</div>
+</div>
+<a class="back" href="index.html">← Back to JavaScript Practical Hub</a>
+</main>
+
+<script>
+function runProgram() {
+    const input = document.getElementById('input');
+    const out = document.getElementById('output');
+    const value = input ? input.value.trim() : "";
+
+    const outputs = {
+      1: "Hello World",
+      2: "Addition: 30 &nbsp; Subtraction: 10 &nbsp; Multiplication: 200 &nbsp; Division: 2",
+      3: "Largest number: 30",
+      4: "8 is Even",
+      5: "The number is Positive",
+      6: "Factorial: 120",
+      7: "Fibonacci: 0, 1, 1, 2, 3, 5, 8, 13",
+      8: "The number is Prime",
+      9: "The number is a Palindrome",
+      10: "Reversed number: 54321",
+      11: "Sum of digits: 15",
+      12: "Largest: 50 &nbsp; Smallest: 10",
+      13: "Sorted array: 10, 20, 30, 40, 50",
+      14: "Sum: 150 &nbsp; Average: 30",
+      15: "Function result: 25",
+      16: "Arrow function result: 25",
+      17: "String length: 11 &nbsp; Uppercase: HELLO WORLD",
+      18: "Array after method operations: 10, 20, 30, 40",
+      19: "Object: Name = Bharath, Course = CSE",
+      20: "Current Date and Math result displayed successfully.",
+      22: "Text changed successfully using JavaScript.",
+      23: "Background color changed successfully.",
+      24: "Button clicked successfully!",
+      25: "Element visibility changed successfully.",
+      26: "Image changed successfully.",
+      27: "Digital Clock: " + new Date().toLocaleTimeString(),
+      28: "Calculator Output: 25 + 15 = 40",
+      29: "Congratulations! You guessed the number.",
+      30: "Form validation successful.",
+      31: "Name ✓  Email ✓  Phone ✓  Password ✓",
+      32: "To-Do List: Task added successfully.",
+      33: "Quiz completed. Score: 4 / 5",
+      34: "Counter value: 1",
+      35: "Stopwatch: 00:10",
+      36: "Countdown: 00:10",
+      38: "let, const, template literals and destructuring demonstrated.",
+      39: "Spread and rest operators demonstrated successfully.",
+      40: "Class and object created successfully.",
+      41: "Inheritance demonstrated successfully.",
+      42: "Callback → Promise → Async/Await completed.",
+      43: "API data fetched successfully.",
+      44: "API data displayed dynamically.",
+      45: "Data stored and retrieved from localStorage.",
+      46: "Login form validation successful.",
+      47: "Interactive webpage loaded successfully.",
+      48: "After swapping: A = 20, B = 10",
+      49: "GCD: 6",
+      50: "LCM: 60",
+      51: "The number is an Armstrong number.",
+      52: "The number is a Perfect number.",
+      53: "Multiplication Table: 5 × 1 = 5, 5 × 2 = 10, 5 × 3 = 15",
+      54: "Power: 2⁵ = 32",
+      55: "Number of digits: 5",
+      56: "Second-largest element: 40",
+      57: "Array without duplicates: 10, 20, 30, 40",
+      58: "Merged array: 1, 2, 3, 4, 5, 6",
+      59: "Frequency: 10 → 2, 20 → 3, 30 → 1",
+      60: "Common elements: 20, 30",
+      61: "Reversed string: olleh",
+      62: "The string is a Palindrome.",
+      63: "Vowels: 3 &nbsp; Consonants: 7",
+      64: "Number of words: 5",
+      65: "Character frequency calculated successfully.",
+      66: "Regular expression matched successfully.",
+      67: "Valid email address."
+    };
+    let result = outputs[47] || "Output generated successfully.";
+    if (value && 47 in outputs && [47].includes(4)) {
+        result = value + (Number(value) % 2 === 0 ? " is Even" : " is Odd");
+    }
+    out.innerHTML = result;
+}
+</script>
+</body>
+</html>

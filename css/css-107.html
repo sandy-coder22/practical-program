@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>CSS Practical 107</title>
+<style>
+:root{--bg:#EAFFF7;--mint:#35A982;--dark:#18352D;--light:#DFF9EE;--line:#B8E6D5;--muted:#607C72;--white:#fff}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:radial-gradient(circle at 90% 5%,#D4FAEB 0,#EAFFF7 38%,#CFF4E4 100%);color:var(--dark);padding:28px 18px}
+main{max-width:1050px;margin:auto}
+.page{background:rgba(255,255,255,.88);border:1px solid var(--line);border-radius:24px;padding:30px;box-shadow:0 18px 45px rgba(24,53,45,.10)}
+h1{color:#24966F;margin:0 0 12px;font-size:clamp(30px,5vw,52px)}
+h2{color:#24966F;margin-top:26px}
+p{color:var(--muted);line-height:1.7}
+.badge{display:inline-block;background:var(--light);color:#24966F;border:1px solid var(--line);padding:7px 12px;border-radius:999px;font-weight:800;font-size:12px;letter-spacing:.8px}
+.demo{margin-top:22px;padding:22px;background:#F7FFFB;border:1px solid var(--line);border-radius:18px}
+button,.btn{background:var(--mint);color:white;border:0;border-radius:10px;padding:11px 16px;font-weight:800;cursor:pointer;text-decoration:none;display:inline-block}
+input,select,textarea{padding:10px;border:1px solid var(--line);border-radius:9px;font:inherit}
+.card{background:white;border:1px solid var(--line);border-radius:18px;padding:20px}
+.row{display:flex;gap:15px;flex-wrap:wrap}.row>*{flex:1}
+table{width:100%;border-collapse:collapse;background:white}th,td{border:1px solid var(--line);padding:12px}th{background:var(--light)}
+
+.internal{padding:14px;background:#DFF9EE;border-radius:10px}.external{padding:14px;border:2px solid #35A982;border-radius:10px;margin-top:10px}
+#unique{color:#24966F}.sample{font-weight:800}[title]{border-bottom:2px dotted #35A982} .child>span{color:#24966F}
+.linear{padding:35px;border-radius:15px;background:linear-gradient(90deg,#35A982,#B7F7DF);color:#18352D}.radial{padding:35px;border-radius:15px;background:radial-gradient(circle,#B7F7DF,#35A982);margin-top:12px}
+.background-demo{background:#DFF9EE url('https://picsum.photos/900/220') center/cover no-repeat;background-blend-mode:screen}
+.border-demo{display:flex;gap:12px;flex-wrap:wrap}.border-demo div{padding:20px;background:#F7FFFB}.border-demo div:nth-child(1){border:3px solid #35A982}.border-demo div:nth-child(2){border:3px dashed #35A982}.border-demo div:nth-child(3){border:3px dotted #35A982}.border-demo div:nth-child(4){border:3px solid #24966F;border-radius:30px}
+.font-demo{font-family:Georgia,serif;font-size:38px;font-style:italic;font-weight:800}.text-demo{text-align:center;text-transform:capitalize;letter-spacing:1px;line-height:2}
+.box-model{background:#DFF9EE;padding:28px;border:8px solid #35A982;margin:25px}.box-model div{background:white;padding:22px}
+.size-demo div{width:clamp(180px,60%,500px);min-height:100px;background:#DFF9EE;padding:25px;border-radius:15px}
+.display-demo span{display:inline-block;background:#DFF9EE;padding:10px;margin:5px}.display-demo>div{margin:8px}.flex{display:flex;gap:10px;background:#DFF9EE;padding:15px}.flex b{background:white;padding:10px}
+.faded{opacity:.35;margin-top:10px}.overflow-demo{height:120px;overflow:auto;background:#DFF9EE;padding:15px}.shadow-demo{box-shadow:0 18px 40px #18352d22}.shadow-demo h2{text-shadow:2px 2px 4px #7dcfb0}
+.variable-demo{--accent:#35A982;border:3px solid var(--accent)}.cascade-demo p{color:#24966F!important}
+.function-demo h2{font-size:clamp(24px,5vw,44px)}.position-demo{position:relative;height:160px}.back,.front{padding:20px;position:absolute;border-radius:12px}.back{background:#DFF9EE;left:20px;top:20px}.front{background:#35A982;color:white;left:80px;top:60px;z-index:2}
+.float-box{float:left;background:#35A982;color:white;padding:18px;margin-right:15px}.clear-note{display:block;clear:both}.cursor-demo{cursor:pointer}.outline-demo{outline:3px solid #35A982;outline-offset:8px;margin:12px}.object-demo{width:100%;height:180px;object-fit:cover;object-position:center}
+.filter-demo img{filter:grayscale(.8) contrast(1.2) brightness(1.1)}.hover-card{padding:40px;background:#DFF9EE;border-radius:18px;transition:.3s}.hover-card:hover{transform:translateY(-7px) scale(1.02);box-shadow:0 18px 35px #18352d22}
+.transform-demo{perspective:600px}.transform-demo div{width:180px;padding:35px;background:#35A982;color:white;transform:rotateY(18deg) rotateX(8deg);margin:auto}.spinner{width:45px;height:45px;border:5px solid #B8E6D5;border-top-color:#35A982;border-radius:50%;animation:spin 1s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
+.ui-nav{display:flex;gap:20px;align-items:center;background:white;border:1px solid #B8E6D5;padding:15px;border-radius:14px}.ui-nav a{color:#24966F;text-decoration:none}.ui-panel{margin-top:15px;padding:20px;background:#DFF9EE;border-radius:12px}.ui-card{padding:22px;background:white;border:1px solid #B8E6D5;border-radius:18px}.ui-card .badge{margin-bottom:8px}.bars{height:180px;display:flex;align-items:end;gap:15px;background:#F4FFFA;padding:20px}.bars i{display:block;flex:1;background:#35A982;border-radius:8px 8px 0 0}.chat{background:#F4FFFA;padding:20px;border-radius:15px}.message{background:white;padding:14px;border-radius:12px;margin-bottom:12px}.score strong{display:block;font-size:42px;color:#24966F}.score span{color:#607C72}.meter{height:12px;background:#DFF9EE;border-radius:99px;margin-top:10px}.meter span{display:block;width:87%;height:100%;background:#35A982;border-radius:99px}.responsive-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.responsive-grid div{padding:25px;background:#DFF9EE;text-align:center;border-radius:12px}.dark{background:#18352D;color:#F1FFF9}.dark .page,.dark .demo,.dark .ui-card{background:#0D2D24;color:#F1FFF9}.glass{background:rgba(255,255,255,.45);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.7)}.gradient-panel{background:linear-gradient(135deg,#35A982,#B7F7DF);padding:35px;border-radius:20px}.calendar{background:white;padding:25px;border-radius:15px}.calgrid{margin-top:15px;word-spacing:14px;line-height:2.4;color:#24966F}.error-page{text-align:center}.error-code{font-size:70px;font-weight:900;color:#24966F}.landing{background:linear-gradient(135deg,#18352D,#24966F);color:white;padding:35px;border-radius:20px}.landing p{color:#D7EEE5}
+@media(max-width:700px){body{padding:18px 12px}.responsive-grid{grid-template-columns:1fr}.ui-nav{flex-wrap:wrap}.box-model{margin:12px}}
+</style>
+</head>
+<body>
+<main class="page">
+<span class="badge">CSS PRACTICAL 107</span>
+<h1>Create a webpage for an area chart analytics component.</h1>
+<p>Web Technology • CSS Practical Collection</p>
+<div class="demo"><div class="bars"><i style="height:35%"></i><i style="height:65%"></i><i style="height:48%"></i><i style="height:82%"></i><i style="height:60%"></i></div><p>Analytics visualization preview.</p></div>
+</main>
+</body>
+</html>
