@@ -1,0 +1,13 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>DevCore. | JS-43</title><link rel="stylesheet" href="style.css"></head>
+<body><header class="nav"><a class="logo" href="index.html">Dev<span>Core.</span></a>
+<nav class="navlinks"><a href="index.html">Home</a><a href="index.html#html">HTML</a><a href="index.html#css">CSS</a><a href="index.html#javascript">JavaScript</a></nav></header>
+<main class="page"><a class="back" href="index.html#programs">← Back to JavaScript Practical 67</a>
+<section class="labhead"><div class="num">JS-43 / JAVASCRIPT PRACTICAL</div>
+<h1>Fetch data from an API using Fetch API.</h1>
+<p>A standalone practical page in the same soft DevCore visual system shown in the reference.</p></section>
+<section class="workspace"><div class="panel"><h2>Live Experiment</h2><div id="out" class="output">Result will appear here.</div></div>
+<div class="panel"><h2>JavaScript Source</h2><pre><code>async function load(){try{const r=await fetch(&#x27;https://jsonplaceholder.typicode.com/todos/1&#x27;);const d=await r.json();out.textContent=JSON.stringify(d,null,2)}catch(e){out.textContent=&#x27;Request failed&#x27;}}load();</code></pre></div></section></main>
+<footer>DevCore. · WebTech Practical Hub · JavaScript Practical 43</footer>
+<script>async function load(){try{const r=await fetch('https://jsonplaceholder.typicode.com/todos/1');const d=await r.json();out.textContent=JSON.stringify(d,null,2)}catch(e){out.textContent='Request failed'}}load();</script></body></html>

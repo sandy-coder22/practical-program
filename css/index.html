@@ -1,0 +1,1330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Practical Hub | DevCore</title>
+
+<style>
+*{box-sizing:border-box}
+
+:root{
+  --bg:#fffaf7;
+  --surface:#ffffff;
+  --surface2:#fff7f2;
+  --accent:#e9a3a0;
+  --text:#3f3f46;
+  --muted:#7c7c86;
+  --border:#eadfe0;
+  --accent-dark:#c98583;
+}
+
+html{scroll-behavior:smooth}
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:Arial,Helvetica,sans-serif;
+  line-height:1.6;
+}
+
+nav{
+  height:70px;
+  background:var(--surface2);
+  border-bottom:1px solid var(--border);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 7%;
+  position:sticky;
+  top:0;
+  z-index:20;
+}
+
+.logo{
+  font-size:25px;
+  font-weight:800;
+  letter-spacing:-1px;
+}
+
+.logo span{color:var(--accent-dark)}
+
+nav .links{
+  display:flex;
+  gap:24px;
+}
+
+nav a{
+  color:var(--muted);
+  text-decoration:none;
+  font-size:14px;
+  transition:.25s;
+}
+
+nav a:hover{color:var(--accent-dark)}
+
+main{
+  max-width:1250px;
+  margin:auto;
+  padding:58px 7% 80px;
+}
+
+.hero{
+  text-align:center;
+  margin-bottom:42px;
+}
+
+.tag{
+  display:inline-block;
+  color:var(--accent-dark);
+  border:1px solid #e7c7c5;
+  background:#fff0ed;
+  padding:6px 11px;
+  border-radius:999px;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:1.5px;
+}
+
+h1{
+  font-size:clamp(34px,5vw,58px);
+  line-height:1.05;
+  margin:18px 0 12px;
+  letter-spacing:-2px;
+}
+
+.lead{
+  max-width:760px;
+  margin:0 auto;
+  color:var(--muted);
+}
+
+.stats{
+  display:flex;
+  justify-content:center;
+  gap:14px;
+  flex-wrap:wrap;
+  margin:28px 0 45px;
+}
+
+.metric{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:15px 25px;
+  min-width:150px;
+  box-shadow:0 12px 30px #d8cfd066;
+}
+
+.metric strong{
+  display:block;
+  font-size:24px;
+  color:var(--accent-dark);
+}
+
+.metric span{
+  font-size:12px;
+  color:var(--muted);
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+  gap:16px;
+}
+
+.card{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:20px;
+  text-decoration:none;
+  color:var(--text);
+  transition:transform .25s,box-shadow .25s,border-color .25s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+  border-color:var(--accent);
+  box-shadow:0 15px 35px #d8cfd066;
+}
+
+.number{
+  display:inline-block;
+  font-size:11px;
+  font-weight:700;
+  color:var(--accent-dark);
+  background:#fff0ed;
+  border:1px solid #e7c7c5;
+  border-radius:999px;
+  padding:4px 8px;
+  margin-bottom:12px;
+}
+
+.title{
+  font-weight:700;
+  margin-bottom:12px;
+}
+
+.open{
+  font-size:12px;
+  color:var(--muted);
+}
+
+.card:hover .open{
+  color:var(--accent-dark);
+}
+
+footer{
+  text-align:center;
+  color:var(--muted);
+  font-size:12px;
+  padding:25px;
+  border-top:1px solid var(--border);
+}
+
+@media(max-width:650px){
+  nav{padding:0 5%}
+  nav .links{gap:10px}
+  nav a{font-size:12px}
+  main{padding:45px 5% 60px}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">Dev<span>Core.</span></div>
+
+  <div class="links">
+    <a href="index.html">Home</a>
+    <a href="#practicals">CSS</a>
+  </div>
+</nav>
+
+<main>
+
+<section class="hero">
+  <span class="tag">CSS PRACTICAL COLLECTION</span>
+
+  <h1>CSS Practical Hub</h1>
+
+  <p class="lead">
+    Explore all 270 CSS practical programs in one place.
+    Select any practical below to open its individual HTML file.
+  </p>
+</section>
+
+<div class="stats">
+
+  <div class="metric">
+    <strong>270</strong>
+    <span>CSS Practicals</span>
+  </div>
+
+  <div class="metric">
+    <strong>270</strong>
+    <span>HTML Files</span>
+  </div>
+
+  <div class="metric">
+    <strong>Pastel</strong>
+    <span>Color Theme</span>
+  </div>
+
+</div>
+
+<section id="practicals" class="grid">
+<a class="card" href="css001.html">
+  <div class="number">CSS 001</div>
+  <div class="title">CSS Practical 1</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css002.html">
+  <div class="number">CSS 002</div>
+  <div class="title">CSS Practical 2</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css003.html">
+  <div class="number">CSS 003</div>
+  <div class="title">CSS Practical 3</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css004.html">
+  <div class="number">CSS 004</div>
+  <div class="title">CSS Practical 4</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css005.html">
+  <div class="number">CSS 005</div>
+  <div class="title">CSS Practical 5</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css006.html">
+  <div class="number">CSS 006</div>
+  <div class="title">CSS Practical 6</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css007.html">
+  <div class="number">CSS 007</div>
+  <div class="title">CSS Practical 7</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css008.html">
+  <div class="number">CSS 008</div>
+  <div class="title">CSS Practical 8</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css009.html">
+  <div class="number">CSS 009</div>
+  <div class="title">CSS Practical 9</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css010.html">
+  <div class="number">CSS 010</div>
+  <div class="title">CSS Practical 10</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css011.html">
+  <div class="number">CSS 011</div>
+  <div class="title">CSS Practical 11</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css012.html">
+  <div class="number">CSS 012</div>
+  <div class="title">CSS Practical 12</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css013.html">
+  <div class="number">CSS 013</div>
+  <div class="title">CSS Practical 13</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css014.html">
+  <div class="number">CSS 014</div>
+  <div class="title">CSS Practical 14</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css015.html">
+  <div class="number">CSS 015</div>
+  <div class="title">CSS Practical 15</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css016.html">
+  <div class="number">CSS 016</div>
+  <div class="title">CSS Practical 16</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css017.html">
+  <div class="number">CSS 017</div>
+  <div class="title">CSS Practical 17</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css018.html">
+  <div class="number">CSS 018</div>
+  <div class="title">CSS Practical 18</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css019.html">
+  <div class="number">CSS 019</div>
+  <div class="title">CSS Practical 19</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css020.html">
+  <div class="number">CSS 020</div>
+  <div class="title">CSS Practical 20</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css021.html">
+  <div class="number">CSS 021</div>
+  <div class="title">CSS Practical 21</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css022.html">
+  <div class="number">CSS 022</div>
+  <div class="title">CSS Practical 22</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css023.html">
+  <div class="number">CSS 023</div>
+  <div class="title">CSS Practical 23</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css024.html">
+  <div class="number">CSS 024</div>
+  <div class="title">CSS Practical 24</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css025.html">
+  <div class="number">CSS 025</div>
+  <div class="title">CSS Practical 25</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css026.html">
+  <div class="number">CSS 026</div>
+  <div class="title">CSS Practical 26</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css027.html">
+  <div class="number">CSS 027</div>
+  <div class="title">CSS Practical 27</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css028.html">
+  <div class="number">CSS 028</div>
+  <div class="title">CSS Practical 28</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css029.html">
+  <div class="number">CSS 029</div>
+  <div class="title">CSS Practical 29</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css030.html">
+  <div class="number">CSS 030</div>
+  <div class="title">CSS Practical 30</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css031.html">
+  <div class="number">CSS 031</div>
+  <div class="title">CSS Practical 31</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css032.html">
+  <div class="number">CSS 032</div>
+  <div class="title">CSS Practical 32</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css033.html">
+  <div class="number">CSS 033</div>
+  <div class="title">CSS Practical 33</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css034.html">
+  <div class="number">CSS 034</div>
+  <div class="title">CSS Practical 34</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css035.html">
+  <div class="number">CSS 035</div>
+  <div class="title">CSS Practical 35</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css036.html">
+  <div class="number">CSS 036</div>
+  <div class="title">CSS Practical 36</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css037.html">
+  <div class="number">CSS 037</div>
+  <div class="title">CSS Practical 37</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css038.html">
+  <div class="number">CSS 038</div>
+  <div class="title">CSS Practical 38</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css039.html">
+  <div class="number">CSS 039</div>
+  <div class="title">CSS Practical 39</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css040.html">
+  <div class="number">CSS 040</div>
+  <div class="title">CSS Practical 40</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css041.html">
+  <div class="number">CSS 041</div>
+  <div class="title">CSS Practical 41</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css042.html">
+  <div class="number">CSS 042</div>
+  <div class="title">CSS Practical 42</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css043.html">
+  <div class="number">CSS 043</div>
+  <div class="title">CSS Practical 43</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css044.html">
+  <div class="number">CSS 044</div>
+  <div class="title">CSS Practical 44</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css045.html">
+  <div class="number">CSS 045</div>
+  <div class="title">CSS Practical 45</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css046.html">
+  <div class="number">CSS 046</div>
+  <div class="title">CSS Practical 46</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css047.html">
+  <div class="number">CSS 047</div>
+  <div class="title">CSS Practical 47</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css048.html">
+  <div class="number">CSS 048</div>
+  <div class="title">CSS Practical 48</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css049.html">
+  <div class="number">CSS 049</div>
+  <div class="title">CSS Practical 49</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css050.html">
+  <div class="number">CSS 050</div>
+  <div class="title">CSS Practical 50</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css051.html">
+  <div class="number">CSS 051</div>
+  <div class="title">CSS Practical 51</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css052.html">
+  <div class="number">CSS 052</div>
+  <div class="title">CSS Practical 52</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css053.html">
+  <div class="number">CSS 053</div>
+  <div class="title">CSS Practical 53</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css054.html">
+  <div class="number">CSS 054</div>
+  <div class="title">CSS Practical 54</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css055.html">
+  <div class="number">CSS 055</div>
+  <div class="title">CSS Practical 55</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css056.html">
+  <div class="number">CSS 056</div>
+  <div class="title">CSS Practical 56</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css057.html">
+  <div class="number">CSS 057</div>
+  <div class="title">CSS Practical 57</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css058.html">
+  <div class="number">CSS 058</div>
+  <div class="title">CSS Practical 58</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css059.html">
+  <div class="number">CSS 059</div>
+  <div class="title">CSS Practical 59</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css060.html">
+  <div class="number">CSS 060</div>
+  <div class="title">CSS Practical 60</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css061.html">
+  <div class="number">CSS 061</div>
+  <div class="title">CSS Practical 61</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css062.html">
+  <div class="number">CSS 062</div>
+  <div class="title">CSS Practical 62</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css063.html">
+  <div class="number">CSS 063</div>
+  <div class="title">CSS Practical 63</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css064.html">
+  <div class="number">CSS 064</div>
+  <div class="title">CSS Practical 64</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css065.html">
+  <div class="number">CSS 065</div>
+  <div class="title">CSS Practical 65</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css066.html">
+  <div class="number">CSS 066</div>
+  <div class="title">CSS Practical 66</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css067.html">
+  <div class="number">CSS 067</div>
+  <div class="title">CSS Practical 67</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css068.html">
+  <div class="number">CSS 068</div>
+  <div class="title">CSS Practical 68</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css069.html">
+  <div class="number">CSS 069</div>
+  <div class="title">CSS Practical 69</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css070.html">
+  <div class="number">CSS 070</div>
+  <div class="title">CSS Practical 70</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css071.html">
+  <div class="number">CSS 071</div>
+  <div class="title">CSS Practical 71</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css072.html">
+  <div class="number">CSS 072</div>
+  <div class="title">CSS Practical 72</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css073.html">
+  <div class="number">CSS 073</div>
+  <div class="title">CSS Practical 73</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css074.html">
+  <div class="number">CSS 074</div>
+  <div class="title">CSS Practical 74</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css075.html">
+  <div class="number">CSS 075</div>
+  <div class="title">CSS Practical 75</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css076.html">
+  <div class="number">CSS 076</div>
+  <div class="title">CSS Practical 76</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css077.html">
+  <div class="number">CSS 077</div>
+  <div class="title">CSS Practical 77</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css078.html">
+  <div class="number">CSS 078</div>
+  <div class="title">CSS Practical 78</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css079.html">
+  <div class="number">CSS 079</div>
+  <div class="title">CSS Practical 79</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css080.html">
+  <div class="number">CSS 080</div>
+  <div class="title">CSS Practical 80</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css081.html">
+  <div class="number">CSS 081</div>
+  <div class="title">CSS Practical 81</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css082.html">
+  <div class="number">CSS 082</div>
+  <div class="title">CSS Practical 82</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css083.html">
+  <div class="number">CSS 083</div>
+  <div class="title">CSS Practical 83</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css084.html">
+  <div class="number">CSS 084</div>
+  <div class="title">CSS Practical 84</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css085.html">
+  <div class="number">CSS 085</div>
+  <div class="title">CSS Practical 85</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css086.html">
+  <div class="number">CSS 086</div>
+  <div class="title">CSS Practical 86</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css087.html">
+  <div class="number">CSS 087</div>
+  <div class="title">CSS Practical 87</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css088.html">
+  <div class="number">CSS 088</div>
+  <div class="title">CSS Practical 88</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css089.html">
+  <div class="number">CSS 089</div>
+  <div class="title">CSS Practical 89</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css090.html">
+  <div class="number">CSS 090</div>
+  <div class="title">CSS Practical 90</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css091.html">
+  <div class="number">CSS 091</div>
+  <div class="title">CSS Practical 91</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css092.html">
+  <div class="number">CSS 092</div>
+  <div class="title">CSS Practical 92</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css093.html">
+  <div class="number">CSS 093</div>
+  <div class="title">CSS Practical 93</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css094.html">
+  <div class="number">CSS 094</div>
+  <div class="title">CSS Practical 94</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css095.html">
+  <div class="number">CSS 095</div>
+  <div class="title">CSS Practical 95</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css096.html">
+  <div class="number">CSS 096</div>
+  <div class="title">CSS Practical 96</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css097.html">
+  <div class="number">CSS 097</div>
+  <div class="title">CSS Practical 97</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css098.html">
+  <div class="number">CSS 098</div>
+  <div class="title">CSS Practical 98</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css099.html">
+  <div class="number">CSS 099</div>
+  <div class="title">CSS Practical 99</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css100.html">
+  <div class="number">CSS 100</div>
+  <div class="title">CSS Practical 100</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css101.html">
+  <div class="number">CSS 101</div>
+  <div class="title">CSS Practical 101</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css102.html">
+  <div class="number">CSS 102</div>
+  <div class="title">CSS Practical 102</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css103.html">
+  <div class="number">CSS 103</div>
+  <div class="title">CSS Practical 103</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css104.html">
+  <div class="number">CSS 104</div>
+  <div class="title">CSS Practical 104</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css105.html">
+  <div class="number">CSS 105</div>
+  <div class="title">CSS Practical 105</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css106.html">
+  <div class="number">CSS 106</div>
+  <div class="title">CSS Practical 106</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css107.html">
+  <div class="number">CSS 107</div>
+  <div class="title">CSS Practical 107</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css108.html">
+  <div class="number">CSS 108</div>
+  <div class="title">CSS Practical 108</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css109.html">
+  <div class="number">CSS 109</div>
+  <div class="title">CSS Practical 109</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css110.html">
+  <div class="number">CSS 110</div>
+  <div class="title">CSS Practical 110</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css111.html">
+  <div class="number">CSS 111</div>
+  <div class="title">CSS Practical 111</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css112.html">
+  <div class="number">CSS 112</div>
+  <div class="title">CSS Practical 112</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css113.html">
+  <div class="number">CSS 113</div>
+  <div class="title">CSS Practical 113</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css114.html">
+  <div class="number">CSS 114</div>
+  <div class="title">CSS Practical 114</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css115.html">
+  <div class="number">CSS 115</div>
+  <div class="title">CSS Practical 115</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css116.html">
+  <div class="number">CSS 116</div>
+  <div class="title">CSS Practical 116</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css117.html">
+  <div class="number">CSS 117</div>
+  <div class="title">CSS Practical 117</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css118.html">
+  <div class="number">CSS 118</div>
+  <div class="title">CSS Practical 118</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css119.html">
+  <div class="number">CSS 119</div>
+  <div class="title">CSS Practical 119</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css120.html">
+  <div class="number">CSS 120</div>
+  <div class="title">CSS Practical 120</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css121.html">
+  <div class="number">CSS 121</div>
+  <div class="title">CSS Practical 121</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css122.html">
+  <div class="number">CSS 122</div>
+  <div class="title">CSS Practical 122</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css123.html">
+  <div class="number">CSS 123</div>
+  <div class="title">CSS Practical 123</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css124.html">
+  <div class="number">CSS 124</div>
+  <div class="title">CSS Practical 124</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css125.html">
+  <div class="number">CSS 125</div>
+  <div class="title">CSS Practical 125</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css126.html">
+  <div class="number">CSS 126</div>
+  <div class="title">CSS Practical 126</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css127.html">
+  <div class="number">CSS 127</div>
+  <div class="title">CSS Practical 127</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css128.html">
+  <div class="number">CSS 128</div>
+  <div class="title">CSS Practical 128</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css129.html">
+  <div class="number">CSS 129</div>
+  <div class="title">CSS Practical 129</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css130.html">
+  <div class="number">CSS 130</div>
+  <div class="title">CSS Practical 130</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css131.html">
+  <div class="number">CSS 131</div>
+  <div class="title">CSS Practical 131</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css132.html">
+  <div class="number">CSS 132</div>
+  <div class="title">CSS Practical 132</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css133.html">
+  <div class="number">CSS 133</div>
+  <div class="title">CSS Practical 133</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css134.html">
+  <div class="number">CSS 134</div>
+  <div class="title">CSS Practical 134</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css135.html">
+  <div class="number">CSS 135</div>
+  <div class="title">CSS Practical 135</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css136.html">
+  <div class="number">CSS 136</div>
+  <div class="title">CSS Practical 136</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css137.html">
+  <div class="number">CSS 137</div>
+  <div class="title">CSS Practical 137</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css138.html">
+  <div class="number">CSS 138</div>
+  <div class="title">CSS Practical 138</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css139.html">
+  <div class="number">CSS 139</div>
+  <div class="title">CSS Practical 139</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css140.html">
+  <div class="number">CSS 140</div>
+  <div class="title">CSS Practical 140</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css141.html">
+  <div class="number">CSS 141</div>
+  <div class="title">CSS Practical 141</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css142.html">
+  <div class="number">CSS 142</div>
+  <div class="title">CSS Practical 142</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css143.html">
+  <div class="number">CSS 143</div>
+  <div class="title">CSS Practical 143</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css144.html">
+  <div class="number">CSS 144</div>
+  <div class="title">CSS Practical 144</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css145.html">
+  <div class="number">CSS 145</div>
+  <div class="title">CSS Practical 145</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css146.html">
+  <div class="number">CSS 146</div>
+  <div class="title">CSS Practical 146</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css147.html">
+  <div class="number">CSS 147</div>
+  <div class="title">CSS Practical 147</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css148.html">
+  <div class="number">CSS 148</div>
+  <div class="title">CSS Practical 148</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css149.html">
+  <div class="number">CSS 149</div>
+  <div class="title">CSS Practical 149</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css150.html">
+  <div class="number">CSS 150</div>
+  <div class="title">CSS Practical 150</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css151.html">
+  <div class="number">CSS 151</div>
+  <div class="title">CSS Practical 151</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css152.html">
+  <div class="number">CSS 152</div>
+  <div class="title">CSS Practical 152</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css153.html">
+  <div class="number">CSS 153</div>
+  <div class="title">CSS Practical 153</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css154.html">
+  <div class="number">CSS 154</div>
+  <div class="title">CSS Practical 154</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css155.html">
+  <div class="number">CSS 155</div>
+  <div class="title">CSS Practical 155</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css156.html">
+  <div class="number">CSS 156</div>
+  <div class="title">CSS Practical 156</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css157.html">
+  <div class="number">CSS 157</div>
+  <div class="title">CSS Practical 157</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css158.html">
+  <div class="number">CSS 158</div>
+  <div class="title">CSS Practical 158</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css159.html">
+  <div class="number">CSS 159</div>
+  <div class="title">CSS Practical 159</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css160.html">
+  <div class="number">CSS 160</div>
+  <div class="title">CSS Practical 160</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css161.html">
+  <div class="number">CSS 161</div>
+  <div class="title">CSS Practical 161</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css162.html">
+  <div class="number">CSS 162</div>
+  <div class="title">CSS Practical 162</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css163.html">
+  <div class="number">CSS 163</div>
+  <div class="title">CSS Practical 163</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css164.html">
+  <div class="number">CSS 164</div>
+  <div class="title">CSS Practical 164</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css165.html">
+  <div class="number">CSS 165</div>
+  <div class="title">CSS Practical 165</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css166.html">
+  <div class="number">CSS 166</div>
+  <div class="title">CSS Practical 166</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css167.html">
+  <div class="number">CSS 167</div>
+  <div class="title">CSS Practical 167</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css168.html">
+  <div class="number">CSS 168</div>
+  <div class="title">CSS Practical 168</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css169.html">
+  <div class="number">CSS 169</div>
+  <div class="title">CSS Practical 169</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css170.html">
+  <div class="number">CSS 170</div>
+  <div class="title">CSS Practical 170</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css171.html">
+  <div class="number">CSS 171</div>
+  <div class="title">CSS Practical 171</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css172.html">
+  <div class="number">CSS 172</div>
+  <div class="title">CSS Practical 172</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css173.html">
+  <div class="number">CSS 173</div>
+  <div class="title">CSS Practical 173</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css174.html">
+  <div class="number">CSS 174</div>
+  <div class="title">CSS Practical 174</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css175.html">
+  <div class="number">CSS 175</div>
+  <div class="title">CSS Practical 175</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css176.html">
+  <div class="number">CSS 176</div>
+  <div class="title">CSS Practical 176</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css177.html">
+  <div class="number">CSS 177</div>
+  <div class="title">CSS Practical 177</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css178.html">
+  <div class="number">CSS 178</div>
+  <div class="title">CSS Practical 178</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css179.html">
+  <div class="number">CSS 179</div>
+  <div class="title">CSS Practical 179</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css180.html">
+  <div class="number">CSS 180</div>
+  <div class="title">CSS Practical 180</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css181.html">
+  <div class="number">CSS 181</div>
+  <div class="title">CSS Practical 181</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css182.html">
+  <div class="number">CSS 182</div>
+  <div class="title">CSS Practical 182</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css183.html">
+  <div class="number">CSS 183</div>
+  <div class="title">CSS Practical 183</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css184.html">
+  <div class="number">CSS 184</div>
+  <div class="title">CSS Practical 184</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css185.html">
+  <div class="number">CSS 185</div>
+  <div class="title">CSS Practical 185</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css186.html">
+  <div class="number">CSS 186</div>
+  <div class="title">CSS Practical 186</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css187.html">
+  <div class="number">CSS 187</div>
+  <div class="title">CSS Practical 187</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css188.html">
+  <div class="number">CSS 188</div>
+  <div class="title">CSS Practical 188</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css189.html">
+  <div class="number">CSS 189</div>
+  <div class="title">CSS Practical 189</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css190.html">
+  <div class="number">CSS 190</div>
+  <div class="title">CSS Practical 190</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css191.html">
+  <div class="number">CSS 191</div>
+  <div class="title">CSS Practical 191</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css192.html">
+  <div class="number">CSS 192</div>
+  <div class="title">CSS Practical 192</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css193.html">
+  <div class="number">CSS 193</div>
+  <div class="title">CSS Practical 193</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css194.html">
+  <div class="number">CSS 194</div>
+  <div class="title">CSS Practical 194</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css195.html">
+  <div class="number">CSS 195</div>
+  <div class="title">CSS Practical 195</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css196.html">
+  <div class="number">CSS 196</div>
+  <div class="title">CSS Practical 196</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css197.html">
+  <div class="number">CSS 197</div>
+  <div class="title">CSS Practical 197</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css198.html">
+  <div class="number">CSS 198</div>
+  <div class="title">CSS Practical 198</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css199.html">
+  <div class="number">CSS 199</div>
+  <div class="title">CSS Practical 199</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css200.html">
+  <div class="number">CSS 200</div>
+  <div class="title">CSS Practical 200</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css201.html">
+  <div class="number">CSS 201</div>
+  <div class="title">CSS Practical 201</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css202.html">
+  <div class="number">CSS 202</div>
+  <div class="title">CSS Practical 202</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css203.html">
+  <div class="number">CSS 203</div>
+  <div class="title">CSS Practical 203</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css204.html">
+  <div class="number">CSS 204</div>
+  <div class="title">CSS Practical 204</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css205.html">
+  <div class="number">CSS 205</div>
+  <div class="title">CSS Practical 205</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css206.html">
+  <div class="number">CSS 206</div>
+  <div class="title">CSS Practical 206</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css207.html">
+  <div class="number">CSS 207</div>
+  <div class="title">CSS Practical 207</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css208.html">
+  <div class="number">CSS 208</div>
+  <div class="title">CSS Practical 208</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css209.html">
+  <div class="number">CSS 209</div>
+  <div class="title">CSS Practical 209</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css210.html">
+  <div class="number">CSS 210</div>
+  <div class="title">CSS Practical 210</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css211.html">
+  <div class="number">CSS 211</div>
+  <div class="title">CSS Practical 211</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css212.html">
+  <div class="number">CSS 212</div>
+  <div class="title">CSS Practical 212</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css213.html">
+  <div class="number">CSS 213</div>
+  <div class="title">CSS Practical 213</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css214.html">
+  <div class="number">CSS 214</div>
+  <div class="title">CSS Practical 214</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css215.html">
+  <div class="number">CSS 215</div>
+  <div class="title">CSS Practical 215</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css216.html">
+  <div class="number">CSS 216</div>
+  <div class="title">CSS Practical 216</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css217.html">
+  <div class="number">CSS 217</div>
+  <div class="title">CSS Practical 217</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css218.html">
+  <div class="number">CSS 218</div>
+  <div class="title">CSS Practical 218</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css219.html">
+  <div class="number">CSS 219</div>
+  <div class="title">CSS Practical 219</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css220.html">
+  <div class="number">CSS 220</div>
+  <div class="title">CSS Practical 220</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css221.html">
+  <div class="number">CSS 221</div>
+  <div class="title">CSS Practical 221</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css222.html">
+  <div class="number">CSS 222</div>
+  <div class="title">CSS Practical 222</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css223.html">
+  <div class="number">CSS 223</div>
+  <div class="title">CSS Practical 223</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css224.html">
+  <div class="number">CSS 224</div>
+  <div class="title">CSS Practical 224</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css225.html">
+  <div class="number">CSS 225</div>
+  <div class="title">CSS Practical 225</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css226.html">
+  <div class="number">CSS 226</div>
+  <div class="title">CSS Practical 226</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css227.html">
+  <div class="number">CSS 227</div>
+  <div class="title">CSS Practical 227</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css228.html">
+  <div class="number">CSS 228</div>
+  <div class="title">CSS Practical 228</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css229.html">
+  <div class="number">CSS 229</div>
+  <div class="title">CSS Practical 229</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css230.html">
+  <div class="number">CSS 230</div>
+  <div class="title">CSS Practical 230</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css231.html">
+  <div class="number">CSS 231</div>
+  <div class="title">CSS Practical 231</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css232.html">
+  <div class="number">CSS 232</div>
+  <div class="title">CSS Practical 232</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css233.html">
+  <div class="number">CSS 233</div>
+  <div class="title">CSS Practical 233</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css234.html">
+  <div class="number">CSS 234</div>
+  <div class="title">CSS Practical 234</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css235.html">
+  <div class="number">CSS 235</div>
+  <div class="title">CSS Practical 235</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css236.html">
+  <div class="number">CSS 236</div>
+  <div class="title">CSS Practical 236</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css237.html">
+  <div class="number">CSS 237</div>
+  <div class="title">CSS Practical 237</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css238.html">
+  <div class="number">CSS 238</div>
+  <div class="title">CSS Practical 238</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css239.html">
+  <div class="number">CSS 239</div>
+  <div class="title">CSS Practical 239</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css240.html">
+  <div class="number">CSS 240</div>
+  <div class="title">CSS Practical 240</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css241.html">
+  <div class="number">CSS 241</div>
+  <div class="title">CSS Practical 241</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css242.html">
+  <div class="number">CSS 242</div>
+  <div class="title">CSS Practical 242</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css243.html">
+  <div class="number">CSS 243</div>
+  <div class="title">CSS Practical 243</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css244.html">
+  <div class="number">CSS 244</div>
+  <div class="title">CSS Practical 244</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css245.html">
+  <div class="number">CSS 245</div>
+  <div class="title">CSS Practical 245</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css246.html">
+  <div class="number">CSS 246</div>
+  <div class="title">CSS Practical 246</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css247.html">
+  <div class="number">CSS 247</div>
+  <div class="title">CSS Practical 247</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css248.html">
+  <div class="number">CSS 248</div>
+  <div class="title">CSS Practical 248</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css249.html">
+  <div class="number">CSS 249</div>
+  <div class="title">CSS Practical 249</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css250.html">
+  <div class="number">CSS 250</div>
+  <div class="title">CSS Practical 250</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css251.html">
+  <div class="number">CSS 251</div>
+  <div class="title">CSS Practical 251</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css252.html">
+  <div class="number">CSS 252</div>
+  <div class="title">CSS Practical 252</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css253.html">
+  <div class="number">CSS 253</div>
+  <div class="title">CSS Practical 253</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css254.html">
+  <div class="number">CSS 254</div>
+  <div class="title">CSS Practical 254</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css255.html">
+  <div class="number">CSS 255</div>
+  <div class="title">CSS Practical 255</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css256.html">
+  <div class="number">CSS 256</div>
+  <div class="title">CSS Practical 256</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css257.html">
+  <div class="number">CSS 257</div>
+  <div class="title">CSS Practical 257</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css258.html">
+  <div class="number">CSS 258</div>
+  <div class="title">CSS Practical 258</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css259.html">
+  <div class="number">CSS 259</div>
+  <div class="title">CSS Practical 259</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css260.html">
+  <div class="number">CSS 260</div>
+  <div class="title">CSS Practical 260</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css261.html">
+  <div class="number">CSS 261</div>
+  <div class="title">CSS Practical 261</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css262.html">
+  <div class="number">CSS 262</div>
+  <div class="title">CSS Practical 262</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css263.html">
+  <div class="number">CSS 263</div>
+  <div class="title">CSS Practical 263</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css264.html">
+  <div class="number">CSS 264</div>
+  <div class="title">CSS Practical 264</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css265.html">
+  <div class="number">CSS 265</div>
+  <div class="title">CSS Practical 265</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css266.html">
+  <div class="number">CSS 266</div>
+  <div class="title">CSS Practical 266</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css267.html">
+  <div class="number">CSS 267</div>
+  <div class="title">CSS Practical 267</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css268.html">
+  <div class="number">CSS 268</div>
+  <div class="title">CSS Practical 268</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css269.html">
+  <div class="number">CSS 269</div>
+  <div class="title">CSS Practical 269</div>
+  <span class="open">Open Practical →</span>
+</a><a class="card" href="css270.html">
+  <div class="number">CSS 270</div>
+  <div class="title">CSS Practical 270</div>
+  <span class="open">Open Practical →</span>
+</a>
+</section>
+
+</main>
+
+<footer>
+  CSS Practical Hub • DevCore Pastel Theme
+</footer>
+
+</body>
+</html>
